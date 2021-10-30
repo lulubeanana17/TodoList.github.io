@@ -7,7 +7,7 @@ function getPosition(position) {
 
   const userAction = async () => {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=metric`
     );
     const myJson = await response.json();
     location.innerText = myJson.name + " / " + myJson.sys.country;
