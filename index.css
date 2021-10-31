@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins&display=swap');
 /*PT Serif*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins&family=Zen+Kaku+Gothic+New&display=swap');
+/*Zen Kaku Gothic New*/
 
 body {
     height: 100%;
@@ -29,12 +31,15 @@ body {
   z-index: 0;
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*clock*/
 #clock {
-  font-size: 120px;
-  padding-top: 1.5em;
+  font-size: 200px;
 }
 /*login*/
 #login {
@@ -68,14 +73,10 @@ body {
 }
 /*todoList*/
 #todoList {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 50vh;
-  width: 40vh;
   list-style-type: none;
   text-align: left;
   font-size: 20px;
+  height: 7em;
 }
 #todoList button {
   margin-right: 1em;
@@ -93,4 +94,88 @@ body {
   top: 3%;
   right: 3%;
   text-align: left;
+  font-size: 20px;
+  font-family: 'Zen Kaku Gothic New';
+}
+
+@media screen and (max-width:1025px) {
+  /* tablet */
+  /*clock*/
+  #clock {
+    font-size: 150px;
+  }
+    /*login & todo input css*/
+  #login input, #todo input {
+    width: 250px;
+    height: 30px;
+  }
+  #login input[type=text], #todo input[type=text] {
+    font-size: 30px;
+  }
+  #login input:focus, #todo input:focus {
+    width: 200px;
+  }
+  /*loginWelcome*/
+  #loginWelcome {
+    font-size: 40px;
+  }
+  /*weather*/
+  #weather {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width:769px) {
+  /* mobile */
+  /*clock*/
+  #clock {
+    font-size: 120px;
+  }
+    /*login & todo input css*/
+  #login input[type=text], #todo input[type=text] {
+    font-size: 25px;
+  }
+  /*loginWelcome*/
+  #loginWelcome {
+    font-size: 35px;
+  }
+  /*weather*/
+  #weather {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width:426px) {
+  /*clock*/
+  #clock {
+    font-size: 70px;
+  }
+
+  /*weather*/
+  #weather {
+    position:static;
+    font-size: 20px;
+    display: flex;
+    margin-top: -1em;
+    margin-bottom: 2em;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width:321px) {
+  /*clock*/
+  #clock {
+    font-size: 60px;
+  }
+
+  #weather {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0;
+  }
+  #weather p {
+    margin: 0;
+  }
 }

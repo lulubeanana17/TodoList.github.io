@@ -8,16 +8,21 @@ const todoInfo = localStorage.getItem(todoKey);
 let storage = [];
 
 function getTodo(event) {
-    event.preventDefault();
-    const value = todoInput.value;
-    todoInput.value = "";
-    const newObj = {
+    if (storage.length < 7) {
+      event.preventDefault();
+      const value = todoInput.value;
+      todoInput.value = "";
+      const newObj = {
         id: new Date().getTime(),
-        text: value
+        text: value,
+      };
+      storage.push(newObj);
+      showTodo(newObj);
+      saveTodo();
+    } else {
+        alert("List is full!");
     }
-    storage.push(newObj);
-    showTodo(newObj);
-    saveTodo();
+    
 }
 
 function showTodo(value) {

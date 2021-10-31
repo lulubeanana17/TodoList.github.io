@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Vanilla final challenge</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="index.css" />
     <script defer src="clock.js"></script>
     <script defer src="login.js"></script>
@@ -17,18 +17,18 @@
       <div id="clock">
         <span>00 : 00 : 00</span>
       </div>
+      <div id="weather">
+        <p id="location"></p>
+        <p id="temp"></p>
+      </div>
       <form id="login">
-        <input required maxlength="15" type="text" placeholder="Write your name">
+        <input required maxlength="10" type="text" placeholder="Write your name">
       </form>
       <div id="loginWelcome"></div>
       <form id="todo">
         <input maxlength="22" required type="text" placeholder="What to do today?">
       </form>
       <ul id="todoList"></ul>
-      <div id="weather">
-        <p id="location"></p>
-        <p id="temp"></p>
-      </div>
     </div>
   </body>
 </html>
