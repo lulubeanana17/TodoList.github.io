@@ -77,6 +77,8 @@ body {
   text-align: left;
   font-size: 20px;
   height: 7em;
+  padding: 0;
+  width: 17em;
 }
 #todoList button {
   margin-right: 1em;
